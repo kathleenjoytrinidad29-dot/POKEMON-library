@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Pokedex</title>
+ 
+  <script src="fetch1.js" defer></script>
+
+  <style>
+    * { box-sizing: border-box; }
+body {
+  margin: 0; 
+  min-height: 100vh; 
+  display: grid; 
+  place-items: center;
+  background: #3f3f3f;
+   font-family: Arial, sans-serif;
+}
+.pokedex {
+  width: min(90%, 480px);
+  padding: 28px;
+  text-align: center;
+  background: white; 
+  border: 15px solid #48293f;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.133);
+}
+h1 { margin-top: 0; color: #ed61e4;
+ }
+.search-area {
+   display: flex; gap: 8px;
+   }
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+}
+
+button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #000000;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+   background: #b93636;
+   }
+.pokemon-card {
+  margin-top: 20px;
+  padding: 18px;
+  background: #9685ab; 
+  border-radius: 14px;
+}
+#pokemonsprite {
+  display: none; 
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+#pokemonName { 
+  text-transform: capitalize;
+ }
+#pokemonTypes, #pokemonStats { 
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+ }
+  </style>
+</head>
+<body>
+
+  <main class="pokedex">
+    <h1>My Pokedex</h1>
+
+    <p>Search for a Pokemon</p>
+    <div class="search-area">
+      <input type="text" id="name" placeholder="Enter Pokemon name">
+     
+      <button id="searchBtn">Search</button>
+
+    </div>
+    <p id="message">Enter a Pokemon name to begin.</p>
+
+    <section class="pokemon-card">
+
+      <img id="pokemonsprite" src="" alt="Pokemon image">
+      <h2 id="pokemonName">Pokemon Name</h2>
+      <p id="pokemonTypes">Type(s):</p>
+      <p id="pokemonStats">Stats:</p>
+    </section>
+  </main>
+
+  
+</body>
+</html>
+
